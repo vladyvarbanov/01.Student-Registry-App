@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: 18.x
         cache: 'npm'
-    - mane: Install dependancies
+    - name: Install dependancies
       run: npm install
     - name: Run integration tests
       run: npm test
