@@ -5,6 +5,7 @@ name: Build Test Deploy
 
 on:
   push:
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
   workflow_dispatch: 
@@ -43,6 +44,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     needs: test-integration
     steps:
       - name: Deploy to production
