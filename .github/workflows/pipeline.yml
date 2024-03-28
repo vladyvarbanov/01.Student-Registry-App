@@ -23,7 +23,7 @@ jobs:
     - name: Install dependancies
       run: npm install
     - name: Run integration tests
-      run: npm test-npm-security
+      run: npm run test-npm-security
 
   test-integration:
     needs: test-security
